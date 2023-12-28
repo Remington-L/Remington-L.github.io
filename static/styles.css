@@ -55,3 +55,7 @@
     color: gray;
     margin: 10px 0 15px 0;
   }
+
+  .drag-area.active {
+    border: 2px dashed #1683ff;
+  }
