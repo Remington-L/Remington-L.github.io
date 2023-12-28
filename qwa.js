@@ -20,9 +20,9 @@ dragArea.addEventListener('dragleave', () => {
 
 dragArea.addEventListener('drop', (ev) => {
     ev.preventDefault();
-    console.log('The file is dropped in drag area');
+    
     file = ev.dataTransfer.files[0];
-    console.log(file);
+    let fileType = file.type
+    console.log(fileType);
+     
 });
-
-
