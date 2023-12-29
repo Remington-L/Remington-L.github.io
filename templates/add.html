@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add New Time
+{% endblock %}
+
+{% block main %}
+    <form action="/add" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="hours" placeholder="Hours" type="number" min="0">
+            <input autocomplete="off" class="form-control mx-auto w-auto" name="minutes" placeholder="Minutes" type="number" min="0" max="60">
+            <input autocomplete="off" class="form-control mx-auto w-auto" name="seconds" placeholder="Seconds" type="number" min="0" max="60">
+            <label for="file">File</label>
+            <input id="file" name="file" type="file" />
+        </div>
+        <div class="mb-5">
+            <textarea name="notes" placeholder="Notes" type="text"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Add</button>
+    </form>
+{% endblock %}

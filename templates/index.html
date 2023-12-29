@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="text-start">Run</th>
+            <th class="text-start">Time</th>
+            <th class="text-start">Notes</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in runs %}
+        <tr>
+            <td><a href="static/uploads/rando{{ row.id }}.pak">{{ row.id }}</a></td>
+            <td>{{ '%02d' % row.hours }}:{{ '%02d' % row.minutes }}:{{ '%02d' % row.seconds }}</td>
+            <td class="MyClass">{{ row.notes }}</td>
+        </tr>
+        {% endfor %}
+
+    </tbody>
+
+{% endblock %}
